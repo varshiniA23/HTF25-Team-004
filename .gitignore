@@ -1,0 +1,22 @@
+# Python
+_pycache_/
+*.py[cod]
+env/
+venv/
+ENV/
+.env
+
+# Node
+node_modules/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Models
+models/saved_models/*
+
+# Data
+data/datasets/*.csv
+data/cache/*
