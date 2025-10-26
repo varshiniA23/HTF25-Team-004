@@ -1,4 +1,7 @@
 # ...existing code...
+from dotenv import load_dotenv
+load_dotenv()
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from models.detector import FakeNewsDetector
@@ -18,7 +21,8 @@ def analyze_news():
     if not article_text or not title:
         return jsonify({'error': 'Missing required fields'}), 400
     result = detector.analyze_article(article_text, title, source_url)
-    return jsonify(result)
+    verdict=result['llm_analysis']['prediction']
+    return jsonify({'verdict': verdict})
 
 @app.route('/api/health', methods=['GET'])
 def health_check():

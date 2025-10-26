@@ -2,7 +2,7 @@ from utils.news_fetcher import NewsFetcher
 from difflib import SequenceMatcher
 
 class FactChecker:
-    def _init_(self):
+    def __init__(self):
         self.news_fetcher = NewsFetcher()
     
     def similarity_ratio(self, text1, text2):

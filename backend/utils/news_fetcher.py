@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timedelta
 
 class NewsFetcher:
-    def _init_(self):
+    def __init__(self):
         self.api_key = os.getenv('NEWS_API_KEY')
         self.base_url = 'https://newsapi.org/v2'
         self.credible_sources = [

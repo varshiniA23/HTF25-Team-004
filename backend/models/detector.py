@@ -3,7 +3,7 @@ from utils.preprocessor import TextPreprocessor
 from utils.fact_checker import FactChecker
 
 class FakeNewsDetector:
-    def _init_(self):
+    def __init__(self):
         self.llm_analyzer = LLMAnalyzer()
         self.preprocessor = TextPreprocessor()
         self.fact_checker = FactChecker()

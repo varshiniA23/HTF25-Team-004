@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 import spacy
 
 class TextPreprocessor:
-    def _init_(self):
+    def __init__(self):
         self.stop_words = set(stopwords.words('english'))
         self.nlp = spacy.load('en_core_web_sm')
     

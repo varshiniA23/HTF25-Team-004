@@ -2,7 +2,8 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 class LLMAnalyzer:
-    def _init_(self):
+    def __init__(self):
+        print("Loading LLM model for fake news detection...")
         model_name = "hamzab/roberta-fake-news-classification"
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
